@@ -53,7 +53,6 @@ const NewTaskDetails = () => {
 			<Button variant="primary" type="submit" className="width-100">
 				Create Event
 			</Button>
-			<NewTaskDatePicker />
 		</Form>
 	);
 };
