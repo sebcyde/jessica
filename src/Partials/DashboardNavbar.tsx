@@ -15,14 +15,17 @@ const DashboardNavbar = (props: Props) => {
 		navigate('/profile');
 	};
 
+	const ToSettings = (): void => {
+		navigate('/settings');
+	};
+
 	return (
 		<Navbar className="bg-blue-med width-100" variant="dark">
 			<Container>
 				<Navbar.Brand href="#home">Jessica</Navbar.Brand>
 				<Nav className="margin-left-a">
-					<Nav.Link>Home</Nav.Link>
 					<Nav.Link onClick={ToProfile}>Profile</Nav.Link>
-					<Nav.Link onClick={ToAbout}>About</Nav.Link>
+					<Nav.Link onClick={ToSettings}>Settings</Nav.Link>
 				</Nav>
 			</Container>
 		</Navbar>

@@ -1,5 +1,4 @@
-import { useState, createContext } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { createContext } from 'react';
 
 interface ITaskInterface {
 	event: string | null;
@@ -9,9 +8,12 @@ interface ITaskInterface {
 	ends: string | null;
 	important: boolean | null;
 	notes?: string | null;
+	user: Object | null;
 }
 
-export const NewTaskContext = createContext<ITaskInterface>({
+export const Context = createContext<ITaskInterface | null>(null);
+
+export const NewTaskContext: ITaskInterface = {
 	event: null,
 	location: null,
 	allday: null,
@@ -19,4 +21,5 @@ export const NewTaskContext = createContext<ITaskInterface>({
 	ends: null,
 	important: null,
 	notes: null,
-});
+	user: null,
+};

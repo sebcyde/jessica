@@ -7,6 +7,7 @@ import NewTask from './Pages/NewTask';
 import Dashboard from './Pages/Dashboard';
 import Profile from './Pages/Profile';
 import About from './Pages/About';
+import Settings from './Pages/Settings';
 
 function App() {
 	const [Loading, setLoading] = useState<boolean>(false);
@@ -21,8 +22,7 @@ function App() {
 						<Route path="/newtask" element={<NewTask />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/profile" element={<Profile />} />
-						{/* <Route path="/newtask" element={<NewTask />} />
-						<Route path="/newtask" element={<NewTask />} /> */}
+						<Route path="/settings" element={<Settings />} />
 					</Routes>
 				</>
 			)}
