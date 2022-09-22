@@ -7,6 +7,45 @@ body {
 		height: 100vh;
 		margin: 0px;
 		padding: 0px;
+		background-color: $BlueDark;
+	}
+
+	// Width
+
+	.width-80 {
+		width: 80%;
+	}
+
+	.width-90 {
+		width: 90%;
+	}
+
+	.width-95 {
+		width: 95%;
+	}
+
+	.width-100 {
+		width: 100%;
+	}
+
+	// Margin
+
+	.margin-left-a {
+		margin-left: auto;
+	}
+
+	.margin-right-a {
+		margin-right: auto;
+	}
+
+	// Padding
+
+	.pad-right-none {
+		padding-right: 0px;
+	}
+
+	.pad-left-none {
+		padding-left: 0px;
 	}
 
 	// Flex
@@ -19,6 +58,10 @@ body {
 		&.just-cent {
 			justify-content: center;
 		}
+		&.just-apart {
+			justify-content: space-between;
+		}
+
 		&.align-cent {
 			align-items: center;
 		}
@@ -28,6 +71,10 @@ body {
 	}
 
 	// Colours
+	.col-white {
+		color: white;
+	}
+
 	.col-red {
 		color: $Red;
 	}
@@ -44,5 +91,26 @@ body {
 
 	.col-blue-dark {
 		color: $BlueDark;
+	}
+
+	// Background Colours
+	.bg-red {
+		background-color: $Red;
+	}
+
+	.bg-black {
+		background-color: $Black;
+	}
+
+	.bg-blue-light {
+		background-color: $BlueLight;
+	}
+
+	.bg-blue-med {
+		background-color: $BlueMed;
+	}
+
+	.bg-blue-dark {
+		background-color: $BlueDark;
 	}
 }

@@ -15,13 +15,22 @@ export const NewTaskNavbar = (props: NewTaskProps) => {
 		navigate('/');
 	};
 
+	const AddTask = (): void => {};
+
 	return (
-		<Navbar>
+		<Navbar className="bg-blue-med">
 			<Container>
-				<Navbar.Brand href="#home">Add new event</Navbar.Brand>
-				<Navbar.Toggle />
+				<Navbar.Collapse className="justify-content-start">
+					<Navbar.Text onClick={NavigateHome} className="col-red">
+						cancel
+					</Navbar.Text>
+				</Navbar.Collapse>
+				<Navbar.Brand className="col-white">New event</Navbar.Brand>
+
 				<Navbar.Collapse className="justify-content-end">
-					<Navbar.Text onClick={NavigateHome}>cancel</Navbar.Text>
+					<Navbar.Text onClick={AddTask} className="col-blue-light">
+						Add
+					</Navbar.Text>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
