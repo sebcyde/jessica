@@ -1,0 +1,48 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	color: $Black;
+	.Page {
+		width: 100vw;
+		height: 100vh;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	// Flex
+
+	.flex {
+		display: flex;
+		&.flex-col {
+			flex-direction: column;
+		}
+		&.just-cent {
+			justify-content: center;
+		}
+		&.align-cent {
+			align-items: center;
+		}
+		&.align-base {
+			align-items: baseline;
+		}
+	}
+
+	// Colours
+	.col-red {
+		color: $Red;
+	}
+	.col-black {
+		color: $Black;
+	}
+	.col-blue-light {
+		color: $BlueLight;
+	}
+
+	.col-blue-med {
+		color: $BlueMed;
+	}
+
+	.col-blue-dark {
+		color: $BlueDark;
+	}
+}
