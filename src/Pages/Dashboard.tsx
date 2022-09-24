@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import DashboardWelcome from '../Components/DashboardWelcome';
+import DashboardWelcome from '../Partials/DashboardWelcome';
 import { NewTaskContext } from '../Context/NewTaskContext';
 import DashboardNavbar from '../Partials/DashboardNavbar';
+import CalendarComponent from '../Partials/CalendarComponent';
 
 type Props = {};
 
@@ -16,8 +17,9 @@ const Dashboard = (props: Props) => {
 	console.log(NewTaskContext);
 
 	return (
-		<div className="Page flex flex-col align-cent">
+		<div className="Page flex flex-col align-cent ">
 			<DashboardNavbar />
+			<CalendarComponent />
 			<DashboardWelcome />
 			<Button
 				onClick={addEvent}
