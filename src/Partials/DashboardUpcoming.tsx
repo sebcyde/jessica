@@ -3,8 +3,15 @@ import { Alert } from 'react-bootstrap';
 
 type Props = {};
 
-const DashboardWelcome = (props: Props) => {
-	const Events: object[] = [];
+type EventType = {
+	title: string;
+	location: string;
+	starts: string;
+	ends: string;
+};
+
+const DashboardUpcoming = (props: Props) => {
+	const Events: EventType[] = [];
 
 	return (
 		<div className="width-100 height-100">
@@ -13,10 +20,12 @@ const DashboardWelcome = (props: Props) => {
 				{Events.map((Event) => {
 					return (
 						<div className="width-100 margin-bot-thin">
-							<span>Example</span>
+							<span>{Event.title}</span>
 							<div className="flex just-apart">
-								<span>Tomorow</span>
-								<span>2:00</span>
+								<span>{Event.location}</span>
+								<span>
+									{Event.starts} - {Event.ends}
+								</span>
 							</div>
 						</div>
 					);
@@ -41,4 +50,4 @@ const DashboardWelcome = (props: Props) => {
 	);
 };
 
-export default DashboardWelcome;
+export default DashboardUpcoming;

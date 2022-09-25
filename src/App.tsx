@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard';
 import Profile from './Pages/Profile';
 import About from './Pages/About';
 import Settings from './Pages/Settings';
+import Calendar from './Pages/Calendar';
 
 function App() {
 	const [Loading, setLoading] = useState<boolean>(false);
@@ -23,6 +24,7 @@ function App() {
 						<Route path="/about" element={<About />} />
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/settings" element={<Settings />} />
+						<Route path="/calendar" element={<Calendar />} />
 					</Routes>
 				</>
 			)}

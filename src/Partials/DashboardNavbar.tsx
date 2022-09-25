@@ -20,12 +20,12 @@ const DashboardNavbar = (props: Props) => {
 	};
 
 	return (
-		<Navbar className="bg-blue-med width-100" variant="dark">
+		<Navbar className="bg-blue-med width-100 pos-fixed bot-0" variant="dark">
 			<Container>
-				<Navbar.Brand href="#home">Jessica</Navbar.Brand>
-				<Nav className="margin-left-a">
-					<Nav.Link onClick={ToProfile}>Profile</Nav.Link>
-					<Nav.Link onClick={ToSettings}>Settings</Nav.Link>
+				<Nav className="width-100 flex just-even">
+					<Nav.Link onClick={ToProfile}>Home</Nav.Link>
+					<Nav.Link onClick={ToProfile}>ToDo</Nav.Link>
+					<Nav.Link onClick={ToSettings}>Notes</Nav.Link>
 				</Nav>
 			</Container>
 		</Navbar>

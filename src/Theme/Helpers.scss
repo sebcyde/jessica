@@ -10,6 +10,24 @@ body {
 		background-color: $BlueDark;
 	}
 
+	.bot-0 {
+		bottom: 0px;
+	}
+
+	.top-0 {
+		top: 0px;
+	}
+
+	// Position
+
+	.pos-fixed {
+		position: fixed;
+	}
+
+	.pos-relative {
+		position: relative;
+	}
+
 	// Width
 
 	.width-80 {
@@ -68,6 +86,10 @@ body {
 		}
 		&.just-apart {
 			justify-content: space-between;
+		}
+
+		&.just-even {
+			justify-content: space-evenly;
 		}
 
 		&.align-cent {

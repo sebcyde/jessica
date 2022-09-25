@@ -6,9 +6,16 @@ import Calendar from 'react-calendar';
 type Props = {};
 
 const CalendarComponent = (props: Props) => {
+	const [ChosenDate, setChosenDate] = useState<Date>();
+
 	return (
 		<div>
-			<Calendar />
+			<Calendar
+				onClickDay={(value) => {
+					setChosenDate(value);
+					console.log(ChosenDate);
+				}}
+			/>
 		</div>
 	);
 };
