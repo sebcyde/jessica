@@ -34,24 +34,29 @@ const DashboardNavbar = (props: Props) => {
 	};
 
 	return (
-		<Navbar className="bg-blue-med width-100 pos-fixed bot-0" variant="dark">
-			<Container>
-				<Nav className="width-100 flex just-even">
-					<Nav.Link onClick={ToDashboard}>
-						<BsHouseDoor />
-					</Nav.Link>
-					<Nav.Link onClick={ToCalendar}>
-						<BsCalendar2Date />
-					</Nav.Link>
-					<Nav.Link onClick={ToToDos}>
-						<BsClipboardCheck />
-					</Nav.Link>
-					<Nav.Link onClick={ToNotes}>
-						<BsPencil />
-					</Nav.Link>
-				</Nav>
-			</Container>
-		</Navbar>
+		<div className="flex pos-fixed bot-0 flex-col width-100">
+			<h2 className="margin-top-0 margin-bot-thin col-white text-cent">
+				Jessica V1.0
+			</h2>
+			<Navbar className="bg-blue-med width-100  bot-0" variant="dark">
+				<Container>
+					<Nav className="width-100 flex just-even">
+						<Nav.Link onClick={ToDashboard}>
+							<BsHouseDoor />
+						</Nav.Link>
+						<Nav.Link onClick={ToCalendar}>
+							<BsCalendar2Date />
+						</Nav.Link>
+						<Nav.Link onClick={ToToDos}>
+							<BsClipboardCheck />
+						</Nav.Link>
+						<Nav.Link onClick={ToNotes}>
+							<BsPencil />
+						</Nav.Link>
+					</Nav>
+				</Container>
+			</Navbar>
+		</div>
 	);
 };
 

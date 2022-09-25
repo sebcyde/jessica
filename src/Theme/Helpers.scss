@@ -9,6 +9,12 @@ body {
 		margin: 0px;
 		padding: 0px;
 		background-color: $BlueDark;
+
+		span {
+			svg {
+				font-size: 25px;
+			}
+		}
 	}
 	.navbar-nav {
 		.react-icons {
@@ -70,6 +76,12 @@ body {
 		width: 100%;
 	}
 
+	// Height
+
+	.fit-cont {
+		height: fit-content;
+	}
+
 	// Margin
 
 	.margin-left-a {
@@ -110,6 +122,14 @@ body {
 		padding-left: 0px;
 	}
 
+	.pad-left-thin {
+		padding-left: 20px;
+	}
+
+	.pad-top-thin {
+		padding-top: 20px;
+	}
+
 	// Flex
 
 	.flex {
@@ -134,6 +154,10 @@ body {
 		&.align-base {
 			align-items: baseline;
 		}
+	}
+
+	.block {
+		display: block;
 	}
 
 	// Colours
@@ -178,5 +202,15 @@ body {
 
 	.bg-blue-dark {
 		background-color: $BlueDark;
+	}
+
+	// Border
+
+	.border-top-none {
+		border-top: none;
+	}
+
+	.border-bot-none {
+		border-bottom: none;
 	}
 }
