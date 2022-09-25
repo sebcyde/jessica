@@ -11,9 +11,7 @@ interface ITaskInterface {
 	user: Object | null;
 }
 
-export const Context = createContext<ITaskInterface | null>(null);
-
-export const NewTaskContext: ITaskInterface = {
+export const InitNewTask: ITaskInterface = {
 	event: null,
 	location: null,
 	allday: null,
@@ -23,3 +21,16 @@ export const NewTaskContext: ITaskInterface = {
 	notes: null,
 	user: null,
 };
+
+interface ICalendarInt {
+	selectedMonth: string | null;
+	selectedDay: string | null;
+}
+
+export const InitCalendar: ICalendarInt = {
+	selectedMonth: null,
+	selectedDay: null,
+};
+
+export const NewTaskContext = createContext<ITaskInterface | null>(null);
+export const CalendarContext = createContext<ICalendarInt | null>(null);
