@@ -37,7 +37,6 @@ const Dashboard = (props: Props) => {
 			>
 				+ New Event
 			</Button>
-			<DashboardNavbar />
 		</div>
 	);
 };

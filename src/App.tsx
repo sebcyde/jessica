@@ -9,6 +9,9 @@ import Profile from './Pages/Profile';
 import About from './Pages/About';
 import Settings from './Pages/Settings';
 import Calendar from './Pages/Calendar';
+import DashboardNavbar from './Partials/DashboardNavbar';
+import ToDo from './Pages/ToDo';
+import Notes from './Pages/Notes';
 
 function App() {
 	const [Loading, setLoading] = useState<boolean>(false);
@@ -25,7 +28,11 @@ function App() {
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/settings" element={<Settings />} />
 						<Route path="/calendar" element={<Calendar />} />
+						<Route path="/todos" element={<ToDo />} />
+						<Route path="/notes" element={<Notes />} />
+						<Route path="/calendar" element={<Calendar />} />
 					</Routes>
+					<DashboardNavbar />
 				</>
 			)}
 		</div>

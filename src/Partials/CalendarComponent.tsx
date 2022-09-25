@@ -9,14 +9,12 @@ const CalendarComponent = (props: Props) => {
 	const [ChosenDate, setChosenDate] = useState<Date>();
 
 	return (
-		<div>
-			<Calendar
-				onClickDay={(value) => {
-					setChosenDate(value);
-					console.log(ChosenDate);
-				}}
-			/>
-		</div>
+		<Calendar
+			onClickDay={(value) => {
+				setChosenDate(value);
+				console.log(ChosenDate);
+			}}
+		/>
 	);
 };
 
