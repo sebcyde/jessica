@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import DashboardUpcoming from '../Partials/DashboardUpcoming';
 import { NewTaskContext } from '../Context/NewTaskContext';
-import DashboardNavbar from '../Partials/DashboardNavbar';
 import CalendarComponent from '../Partials/CalendarComponent';
 
 type Props = {};
@@ -22,8 +21,11 @@ const Dashboard = (props: Props) => {
 	console.log(NewTaskContext);
 
 	return (
-		<div className="Page flex flex-col align-cent ">
-			<h2 className="margin-top-thin col-white">Jessica V1.0</h2>
+		<div className="Page flex flex-col  ">
+			<h2 className="margin-top-thin col-white text-cent">Jessica V1.0</h2>
+			<h3 className="margin-bot-0 text-left margin-left-thin col-blue-light">
+				Today
+			</h3>
 			<DashboardUpcoming />
 			<Button
 				onClick={viewCalendar}

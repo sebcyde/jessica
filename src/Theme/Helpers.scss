@@ -10,6 +10,29 @@ body {
 		padding: 0px;
 		background-color: $BlueDark;
 	}
+	.navbar-nav {
+		.react-icons {
+			vertical-align: middle;
+		}
+		svg {
+			font-size: 25px;
+			color: white;
+		}
+	}
+
+	// Text Align
+
+	.text-left {
+		text-align: left;
+	}
+
+	.text-right {
+		text-align: right;
+	}
+
+	.text-cent {
+		text-align: center;
+	}
 
 	.bot-0 {
 		bottom: 0px;
@@ -53,12 +76,24 @@ body {
 		margin-left: auto;
 	}
 
+	.margin-left-thin {
+		margin-left: 20px;
+	}
+
+	.margin-right-thin {
+		margin-right: 20px;
+	}
+
 	.margin-right-a {
 		margin-right: auto;
 	}
 
 	.margin-top-thin {
 		margin-top: 20px;
+	}
+
+	.margin-bot-0 {
+		margin-bottom: 0px;
 	}
 
 	.margin-bot-thin {

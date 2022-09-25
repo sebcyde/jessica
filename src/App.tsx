@@ -9,7 +9,7 @@ import Profile from './Pages/Profile';
 import About from './Pages/About';
 import Settings from './Pages/Settings';
 import Calendar from './Pages/Calendar';
-import DashboardNavbar from './Partials/DashboardNavbar';
+import Navbar from './Partials/Navbar';
 import ToDo from './Pages/ToDo';
 import Notes from './Pages/Notes';
 
@@ -32,7 +32,7 @@ function App() {
 						<Route path="/notes" element={<Notes />} />
 						<Route path="/calendar" element={<Calendar />} />
 					</Routes>
-					<DashboardNavbar />
+					<Navbar />
 				</>
 			)}
 		</div>
