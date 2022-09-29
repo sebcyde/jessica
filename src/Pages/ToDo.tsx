@@ -1,7 +1,12 @@
 import Moment from 'moment';
 import { IToDo, InitialToDo } from '../Interfaces/NewToDo';
 import React, { useEffect, useState } from 'react';
-import { BsExclamationCircle, BsPlusSquare } from 'react-icons/bs';
+import {
+	BsArrowRightShort,
+	BsExclamationCircle,
+	BsPencilSquare,
+	BsPlusSquare,
+} from 'react-icons/bs';
 import ToDoList from '../Partials/ToDoList';
 import Modal from 'react-bootstrap/Modal';
 import { Button, Container, Form, InputGroup } from 'react-bootstrap';
@@ -37,16 +42,11 @@ const ToDo = () => {
 
 	return (
 		<div className="Page">
-			<span className="width-90 flex align-cent just-apart pad-top-thin col-white margin-left-a margin-right-a">
-				<h3 className="margin-bot-0 col-white">{formatDate}</h3>
+			<span className="width-100 flex align-cent just-apart pad-bot-thin pad-top-thin col-white margin-left-a margin-right-a  border-bot-thin-white pad-left-thin pad-right-thin bg-blue-med">
+				<h3 className="margin-bot-0 col-white">All Todos</h3>
+				{/* <h3 className="margin-bot-0 col-white">{formatDate}</h3> */}
 				<BsPlusSquare onClick={handleShow} />
 			</span>
-			<Button
-				onClick={Explain}
-				className="margin-left-a margin-right-a width-100  margin-top-thin margin-bot-thin"
-			>
-				Explain
-			</Button>
 
 			{Todos === undefined ? (
 				<h2 className="col-white text-cent">No To Dos</h2>
@@ -55,21 +55,50 @@ const ToDo = () => {
 			)}
 
 			{Todos != undefined
-				? Todos!.map((ToDo: IToDo): JSX.Element => {
+				? Todos!.map((ToDo: IToDo, index: number): JSX.Element => {
 						return (
-							<div className="width-100 col-white">
-								<span className="width-100 flex just-apart">
-									<h3 className="margin-bot-0 margin-top-0">{ToDo.name}</h3>
-									{ToDo.important ? <BsExclamationCircle /> : ''}
+							<div
+								className="border-bot-thin-white width-100 col-white pad-top-thin pad-bot-thin pad-left-xthin "
+								key={index}
+							>
+								<span className="width-100 flex just-apart pad-right-xthin">
+									<h3 className="width-80 no-wrap overflow-hide text-overflow-ellips margin-bot-0 margin-top-0 margin-right-a">
+										{ToDo.name}
+									</h3>
+									<a className="col-red">
+										{ToDo.important ? <BsExclamationCircle /> : ''}
+									</a>
+									{/* <a>
+										<BsPencilSquare />
+									</a> */}
 								</span>
-								<h4>{ToDo.location}</h4>
-								{ToDo.notes ? <p>{ToDo.notes}</p> : ''}
+								<h4 className="no-wrap width-50 font-light font-s-med overflow-hide text-overflow-ellips margin-top-xthin">
+									{ToDo.location}
+								</h4>
+								{ToDo.notes ? (
+									<a className="flex align-cent col-white dec-none">
+										View notes <BsArrowRightShort />
+									</a>
+								) : (
+									''
+								)}
 							</div>
 						);
 				  })
 				: ''}
 
-			<Modal show={show} onHide={handleClose}>
+			<Button
+				onClick={Explain}
+				className="margin-left-a margin-right-a width-100  margin-top-thin margin-bot-thin"
+			>
+				Explain
+			</Button>
+
+			<Modal
+				show={show}
+				onHide={handleClose}
+				className="flex align-cent width-100"
+			>
 				<Modal.Header className="bg-blue-light" closeButton>
 					<Modal.Title>Create To Do</Modal.Title>
 				</Modal.Header>
@@ -119,9 +148,9 @@ const ToDo = () => {
 					</InputGroup>
 				</Modal.Body>
 				<Modal.Footer className="bg-blue-light border-top-none">
-					<Button variant="secondary" onClick={handleClose}>
+					{/* <Button variant="secondary" onClick={handleClose}>
 						Cancel
-					</Button>
+					</Button> */}
 					<Button
 						variant="primary"
 						onClick={() => {
