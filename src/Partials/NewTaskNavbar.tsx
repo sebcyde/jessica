@@ -12,7 +12,7 @@ export const NewTaskNavbar = (props: NewTaskProps) => {
 	const navigate = useNavigate();
 
 	const NavigateHome = (): void => {
-		navigate('/');
+		navigate('/calendar');
 	};
 
 	const AddTask = (): void => {};
